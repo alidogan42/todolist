@@ -1,0 +1,60 @@
+#container {
+  align-items: center;
+  
+}
+#toDoWrite {
+    width: 75%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+#up {
+    width: 75%;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    text-align: center;
+}
+#down {
+    width: 75%;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    text-align: center;
+}
+#saveButton {
+    width: 110px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #a70000;
+    color: #fff;
+    box-shadow: 1px 3px 5px lightgrey;
+}
+#clearButton {
+    width: 110px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #53dafc;
+    color: #fff;
+    box-shadow: 1px 3px 5px lightgrey;
+}
+#editButton {
+    width: 110px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #00ad9f;
+    color: #fff;
+    box-shadow: 1px 3px 5px lightgrey;
+}
+#to
+#toDos{
+    display: flex;
+}
+#toDo{
+    display: flex;
+    width: 75rem;
+}

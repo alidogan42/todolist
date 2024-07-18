@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO Application</title>
+    <style>
+        /* CSS kodları buraya eklenecek */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;  /* Yatayda ortalama */
+            align-items: center;      /* Dikeyde ortalama */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;   /* Elemanları dikeyde yerleştirme */
+            align-items: center;
+        }
+
+        .todo-wrapper {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;           /* Elemanlar arası boşluk */
+        }
+
+        .todo-wrapper input {
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        button.save {
+            background-color: red;
+            color: white;
+        }
+
+        button.edit {
+            background-color: teal;
+            color: white;
+        }
+
+        button.delete {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-wrapper">
+            <input type="text" placeholder="Hadi TODO Yazalım">
+            <button class="save">KAYDET</button>
+        </div>
+        <div class="todo-wrapper">
+            <input type="text" value="Hadi TODO Yazalım">
+            <button class="edit">DÜZENLE</button>
+            <button class="delete">SİL</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript kodları buraya eklenecek
+        document.addEventListener('DOMContentLoaded', function() {
+            const saveButtons = document.querySelectorAll('.save');
+            const editButtons = document.querySelectorAll('.edit');
+            const deleteButtons = document.querySelectorAll('.delete');
+            const inputs = document.querySelectorAll('.todo-wrapper input');
+
+            saveButtons.forEach((button, index) => {
+                button.addEventListener('click', function() {
+                    alert('TODO Kaydedildi: ' + inputs[index].value);
+                });
+            });
+
+            editButtons.forEach((button, index) => {
+                button.addEventListener('click', function() {
+                    inputs[index].disabled = false;
+                    inputs[index].focus();
+                });
+            });
+
+            deleteButtons.forEach((button, index) => {
+                button.addEventListener('click', function() {
+                    inputs[index].value = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
